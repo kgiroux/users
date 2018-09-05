@@ -1,13 +1,16 @@
-# Items
-![alt text](https://travis-ci.org/kgiroux/items.svg?branch=master)
+# Users
+![alt text](https://travis-ci.org/kgiroux/users.svg?branch=master)
 
-Items is a micro-service powered by SpringBoot, that will check and update data each 1st of each month, and provide data with webservices to an Android APP. 
+Users is a micro-service powered by SpringBoot, that will allowed users to connect and uses the backoffice of the 
+dofusStuff. 
+This will provide 
+data with webservices to an Android APP and WebApplication. 
 Technologies behind this are : 
 
   - SpringBoot
   - Java 8
   - Postgresql
-  - Docker
+  - Docker (in progress)
 
 # New Features! v0.1.0
 
