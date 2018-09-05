@@ -1,0 +1,51 @@
+info:
+  os: Centos
+service:
+  name: users
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQL9Dialect
+    properties.hibernate.temp.use_jdbc_metadata_defaults: false
+  mail:
+    host: localhost
+    port: 25
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/dofustuff?currentSchema=sch_dofustuff
+    username: dofustuff
+    password: "DofusStuff01*"
+    driverClassName: org.postgresql.Driver
+network:
+  services:
+    media:
+      url: http://localhost:8081/medias/metadata
+      enabled: false
+      extractor: true
+eureka:
+  instance:
+    prefer-ip-address: true
+    appname: @component.name@
+    instanceId: @component.name@:${spring.application.instance_id:${random.value}}
+    hostname: localhost
+  client:
+    enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://@eureka.host@:@eureka.port@/eureka/
+  ribbon:
+    enabled: true
+jwt:
+  secret: dofustuff
+mail:
+  from: noreply@database.nexus-factory.ovh
+  url: dofustuff.dev.fr
+  enabled: true
+logging:
+  level:
+    root: INFO
+  org.springframework.web: DEBUG

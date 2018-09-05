@@ -1,0 +1,51 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository/>
+    <interactiveMode/>
+    <usePluginRegistry/>
+    <offline/>
+    <pluginGroups/>
+    <mirrors>
+        <mirror>
+            <id>nexus-internal</id>
+            <name>Repo Mirror</name>
+            <url>https://nexus.nexus-factory.ovh/repository/maven-public/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>nexus-snapshots</id>
+            <name>Repo Mirror  - snapshot</name>
+            <url>https://nexus.nexus-factory.ovh/repository/maven-snapshots/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>nexus-release</id>
+            <name>Repo Mirror - release</name>
+            <url>https://nexus.nexus-factory.ovh/repository/maven-releases/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
+    <proxies/>
+    <profiles/>
+    <activeProfiles/>
+
+    <servers>
+        <server>
+            <id>nexus-internal</id>
+            <username>dofustuff</username>
+            <password>dofustuff</password>
+        </server>
+        <server>
+            <id>nexus-snapshots</id>
+            <username>dofustuff</username>
+            <password>dofustuff</password>
+        </server>
+        <server>
+            <id>nexus-release</id>
+            <username>admin</username>
+            <password>dofustuff</password>
+        </server>
+    </servers>
+</settings>
